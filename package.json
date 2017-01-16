@@ -1,0 +1,27 @@
+{
+  "name": "slack-bokzuy-bot",
+  "version": "0.1.0",
+  "description": "A connector between Slack and Bokzuy to send badges through Slack!",
+  "author": "dloeda <diego.loeda@gmail.com>",
+  "main": "bin/bot.js",
+  "scripts": {
+    "start": "node bin/bot.js",
+    "test": "echo \"Error: no tests yet\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dloeda/slack-bokzuy-bot"
+  },
+  "bugs": {
+    "url": "https://github.com/dloeda/slack-bokzuy-bot/issues"
+  },
+  "keywords": [
+    "slack",
+    "bockzuy",
+    "plugin"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "5.12.0"
+  }
+}  
