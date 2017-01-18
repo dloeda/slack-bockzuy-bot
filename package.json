@@ -23,5 +23,8 @@
   "license": "MIT",
   "engines": {
     "node": "5.12.0"
+  },
+  "dependencies": {
+    "botkit": "^0.4.9"
   }
-}  
+}
