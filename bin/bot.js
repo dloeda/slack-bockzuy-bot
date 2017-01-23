@@ -2,9 +2,10 @@
 
 const botkit = require('botkit')
 const http = require('../lib/http-utils')
-const logger = require('../lib/logger').init()
+const logger = require('../lib/logger').init({verbose: true})
 const request = require('request')
 const bokzuy = require('../lib/bokzuy-actions')
+const api = require('../lib/bokzuy-api')
 
 const endpoint = 'https://api.bokzuy.com'
 const token = process.env.slack_bokzuy_token
@@ -14,6 +15,7 @@ const controller = botkit.slackbot({
 })
 
 bokzuy.init({
+    api,
     endpoint,
     http,
     logger,
