@@ -9,7 +9,7 @@
     "test": "npm run test-cov",
     "test-unit": "_mocha **/*.spec.js",
     "test-cov": "istanbul cover _mocha **/*.spec.js",
-    "lint": "eslint lib/* bin/*"
+    "lint": "eslint lib/* bin/* && write-good lib/*.js bin/*.js package.json README.md"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
     "istanbul": "^1.1.0-alpha.1",
     "mocha": "^2.5.3",
     "sinon": "1.17.4",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "write-good": "^0.10.0"
   }
 }
