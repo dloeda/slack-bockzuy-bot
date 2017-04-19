@@ -28,7 +28,13 @@ controller.on('slash_command', (bot, message) => {
     if(message.token === token) {
         if (message.command === '/badge') {
             // process message
-            bokzuy.sendBadge({}, (error) => {
+            var parsedMessage = message.replace(/\\badge\ ([\w]+)\ ([\w]+)\ ([\w]+)?\ (\".+\")/, '$1,$2,$3,$4').split(',')
+            bokzuy.sendBadge({
+                name: parsedMessage[0],
+                badge: parsedMessage[1],
+                group: parsedMessage[2],
+                comment: parsedMessage[3]
+            }, (error) => {
                 if (error) bot.replyPublic(message, 'Some kind of magic is breaking our servers, try gain later')
                 else bot.replyPublic(message, 'Badge sent, no regrets')
             })
